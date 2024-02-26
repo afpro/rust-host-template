@@ -1,0 +1,17 @@
+name: {{project-name}}
+services:
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: {{mysql_password}}
+    ports:
+      - 3306:3306
+    volumes:
+      - ./database_storage:/var/lib/mysql:Z
+  cache:
+    image: redis
+    ports:
+      - 6379:6379
+    volumes:
+      - ./cache_persist_storage:/data

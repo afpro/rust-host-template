@@ -1,0 +1,10 @@
+[placeholders]
+mysql_password = { prompt = "MySQL Password", default = "404a6a173a8e", type = "string" }
+mysql_db_name = { prompt = "MySQL Database", type = "string" }
+
+[template]
+include = [
+    "dev_env/compose.yaml",
+    "dev_env/connect_db.sh",
+    "api_server/src/states/mysql_state.rs",
+]

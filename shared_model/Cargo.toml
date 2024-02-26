@@ -1,0 +1,9 @@
+[package]
+name = "shared_model"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bytes = { workspace = true, features = ["serde"] }
+chrono = { workspace = true, features = ["serde"] }
+serde = { workspace = true, features = ["derive"] }

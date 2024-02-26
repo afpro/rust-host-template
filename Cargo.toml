@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "shared_model",
+    "api_server",
+    "api_client",
+]
+
+[workspace.dependencies]
+anyhow = "1.0.79"
+axum = "0.7.4"
+bytes = "1.5.0"
+clap = "4.5.0"
+chrono = "0.4.34"
+dotenv = "0.15.0"
+duration-str = "0.7.1"
+futures = "0.3.30"
+indoc = "2.0.4"
+lazy_static = "1.4.0"
+mysql_async = { version = "0.33.0", default-features = false }
+mysql_common = "0.32.0"
+pin-project = "1.1.4"
+redis = "0.24.0"
+reqwest = { version = "0.11.24", default-features = false }
+serde = "1.0.196"
+serde_json = "1.0.113"
+serde-wasm-bindgen = "0.6.3"
+thiserror = "1.0.57"
+tokio = "1.36.0"
+tower = "0.4.13"
+tower-http = "0.5.1"
+tower-layer = "0.3.2"
+tracing = { version = "0.1.40", features = ["max_level_trace", "release_max_level_debug"] }
+tracing-subscriber = "0.3.18"
+tracing-appender = "0.2.3"
+uuid = "1.7.0"
+wasm-bindgen = "0.2.91"
+wasm-bindgen-futures = "0.4.41"

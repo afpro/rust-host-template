@@ -1,0 +1,32 @@
+[package]
+name = "api_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+shared_model = { path = "../shared_model" }
+anyhow = { workspace = true }
+axum = { workspace = true, features = ["macros"] }
+chrono = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+duration-str = { workspace = true }
+futures = { workspace = true }
+indoc = { workspace = true }
+lazy_static = { workspace = true }
+mysql_async = { workspace = true, default-features = false, features = ["rustls-tls"] }
+mysql_common = { workspace = true, features = ["chrono"] }
+pin-project = { workspace = true }
+redis = { workspace = true, features = ["tokio-rustls-comp"] }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["full"] }
+tower = { workspace = true }
+tower-http = { workspace = true, features = ["trace"] }
+tower-layer = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true, features = ["env-filter", "json"] }
+tracing-appender = { workspace = true }
+uuid = { workspace = true, features = ["v4"] }
+serde = { workspace = true, features = ["derive"] }
+
+[dev-dependencies]
+dotenv = { workspace = true }

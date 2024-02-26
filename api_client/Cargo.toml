@@ -1,0 +1,13 @@
+[package]
+name = "api_client"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+shared_model = { path = "../shared_model" }
+reqwest = { workspace = true, default-features = false, features = ["rustls-tls", "gzip", "json"] }
+wasm-bindgen = { workspace = true }
+wasm-bindgen-futures = { workspace = true }
