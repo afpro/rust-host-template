@@ -1,4 +1,5 @@
 mod api;
+mod db_enum;
 mod scaffold;
 mod schema;
 
