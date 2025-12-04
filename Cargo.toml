@@ -1,0 +1,42 @@
+[package]
+name = ""
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+axum = "0.8"
+axum-extra = { version = "0.12", features = ["typed-header", "cookie"] }
+bb8 = "0.9"
+clap = { version = "4", features = ["derive"] }
+derive_more = { version = "2", features = ["full"] }
+diesel = { version = "2", features = ["postgres_backend", "chrono"] }
+diesel-async = { version = "0.7", features = ["postgres", "bb8"] }
+diesel-derive-enum = { version = "2", features = ["postgres"] }
+pin-project = "1"
+redis = { version = "0.32", features = [
+    "bb8",
+    "aio",
+    "tokio-rustls-comp",
+    "uuid",
+    "json",
+] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "signal",
+    "net",
+] }
+tower = "0.5"
+tower-layer = "0.3"
+tracing = "0.1"
+tracing-appender = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing-loki = { version = "0.2", default-features = false, features = [
+    "compat-0-2-1",
+    "rustls",
+] }
+url = "2"
+uuid = { version = "1", features = ["v4", "serde"] }
